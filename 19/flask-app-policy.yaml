@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-admin-to-flask
+  namespace: ibrohim-final
+spec:
+  podSelector:
+    matchLabels:
+      app: flask-application
+  ingress:
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              name: admin  
+      ports:
+        - protocol: TCP
+          port: 80  
+

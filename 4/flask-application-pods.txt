@@ -1,0 +1,3 @@
+NAME                                 READY   STATUS    RESTARTS   AGE   IP              NODE    NOMINATED NODE   READINESS GATES
+flask-application-55cbd68f69-5fbdg   1/1     Running   0          7s    10.233.66.3     node2   <none>           <none>
+flask-application-55cbd68f69-7vwc6   1/1     Running   0          7s    10.233.67.143   node3   <none>           <none>

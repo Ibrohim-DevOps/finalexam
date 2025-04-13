@@ -1,0 +1,47 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: name-ibrohim-clusterrole
+rules:
+  - verbs: ["list", "get"]
+    resources: ["nodes", "namespaces", "clusterroles"]
+
+---
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: name-ibrohim-clusterrole-binding
+subjects:
+  - kind: User
+    name: Ibrohim
+    apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: ClusterRole
+  name: name-ibrohim-clusterrole
+  apiGroup: rbac.authorization.k8s.io
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

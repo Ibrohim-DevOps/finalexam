@@ -1,0 +1,5 @@
+NAME                           DESIRED   CURRENT   READY   AGE
+final-exam-7467cb7888          1         1         1       157m
+flask-application-55cbd68f69   2         2         2       161m
+frontend-something-977d88d9b   1         1         0       2m1s
+nginx-configmap-65c8b5c848     1         1         1       158m

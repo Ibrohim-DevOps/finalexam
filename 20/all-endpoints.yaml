@@ -1,0 +1,1397 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-12T13:16:44Z"
+    creationTimestamp: "2025-04-12T13:16:44Z"
+    labels:
+      app: final-exam
+    name: final-exam
+    namespace: azizxon-final
+    resourceVersion: "21154535"
+    uid: 372ebe67-ca10-4d5c-aee0-280d71ad601f
+  subsets:
+  - addresses:
+    - ip: 10.233.66.116
+      nodeName: node2
+      targetRef:
+        kind: Pod
+        name: final-exam-df44f796c-qlprl
+        namespace: azizxon-final
+        uid: e2fc8946-5cd8-4b2f-8024-2d654c89b7cf
+    ports:
+    - port: 5000
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-12T13:33:42Z"
+    creationTimestamp: "2025-04-12T13:33:42Z"
+    name: frontend-something
+    namespace: azizxon-final
+    resourceVersion: "21167127"
+    uid: 14a1b5b1-dcc5-4cca-bb42-39b909c7af89
+  subsets:
+  - addresses:
+    - ip: 10.233.66.64
+      nodeName: node2
+      targetRef:
+        kind: Pod
+        name: frontend-something-d47fb476d-dkgl7
+        namespace: azizxon-final
+        uid: 67129486-61f4-4afa-b553-981608fea9cd
+    ports:
+    - port: 80
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2025-04-04T13:46:36Z"
+    labels:
+      app: cert-manager
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/instance: cert-manager
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: cert-manager
+      app.kubernetes.io/version: v1.17.1
+      helm.sh/chart: cert-manager-v1.17.0
+    name: cert-manager
+    namespace: cert-manager
+    resourceVersion: "17865141"
+    uid: 6bc53dcc-9c32-4d1a-9523-5c2f8498fbab
+  subsets:
+  - addresses:
+    - ip: 10.233.67.113
+      nodeName: node3
+      targetRef:
+        kind: Pod
+        name: cert-manager-678f9b7886-2tnd2
+        namespace: cert-manager
+        uid: f90998d7-cb99-4914-b78e-8dfbb12b5488
+    ports:
+    - name: tcp-prometheus-servicemonitor
+      port: 9402
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2025-04-04T13:46:35Z"
+    labels:
+      app: cainjector
+      app.kubernetes.io/component: cainjector
+      app.kubernetes.io/instance: cert-manager
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: cainjector
+      app.kubernetes.io/version: v1.17.1
+      helm.sh/chart: cert-manager-v1.17.0
+    name: cert-manager-cainjector
+    namespace: cert-manager
+    resourceVersion: "17865167"
+    uid: c3950d97-035c-4baa-a069-ac6f9307fb46
+  subsets:
+  - addresses:
+    - ip: 10.233.65.32
+      nodeName: node1
+      targetRef:
+        kind: Pod
+        name: cert-manager-cainjector-75fd759646-rzqw4
+        namespace: cert-manager
+        uid: c7952a10-9de2-4c2b-9719-bfd83bd65e54
+    ports:
+    - name: http-metrics
+      port: 9402
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2025-04-04T13:46:36Z"
+    labels:
+      app: webhook
+      app.kubernetes.io/component: webhook
+      app.kubernetes.io/instance: cert-manager
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: webhook
+      app.kubernetes.io/version: v1.17.1
+      helm.sh/chart: cert-manager-v1.17.0
+    name: cert-manager-webhook
+    namespace: cert-manager
+    resourceVersion: "17865216"
+    uid: 9a78ea5d-5e20-4e6e-9716-2752634be7d0
+  subsets:
+  - addresses:
+    - ip: 10.233.66.211
+      nodeName: node2
+      targetRef:
+        kind: Pod
+        name: cert-manager-webhook-68f8d69c5c-d22fj
+        namespace: cert-manager
+        uid: 86a8861a-1931-4a20-8996-efcbd4f57153
+    ports:
+    - name: https
+      port: 10250
+      protocol: TCP
+    - name: metrics
+      port: 9402
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2025-03-06T12:58:19Z"
+    name: application
+    namespace: default
+    resourceVersion: "6131416"
+    uid: c920d06f-84d1-4d5a-a566-16c4700a9a20
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2025-02-28T04:36:41Z"
+    labels:
+      app: flaskapp
+    name: flaskapp
+    namespace: default
+    resourceVersion: "4223730"
+    uid: 71889b63-3484-46ad-9a83-c29607b59821
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2025-02-28T04:46:59Z"
+    labels:
+      app: flaskapp
+    name: flaskapp-clusterip
+    namespace: default
+    resourceVersion: "4223729"
+    uid: 724153d3-5bda-407b-b0cc-2e81499c37e4
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-12T13:26:13Z"
+    creationTimestamp: "2025-04-12T13:26:14Z"
+    name: frontend-something
+    namespace: default
+    resourceVersion: "21161708"
+    uid: b890781e-f511-45f3-b833-7499220e374d
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2025-03-11T10:53:42Z"
+    name: golang-app-service
+    namespace: default
+    resourceVersion: "16643554"
+    uid: 2fa93979-0ef2-4e34-a109-1ac654614eac
+  subsets:
+  - addresses:
+    - ip: 10.233.65.57
+      nodeName: node1
+      targetRef:
+        kind: Pod
+        name: golang-app-gn875
+        namespace: default
+        uid: d984bf32-e7d9-49cd-90c1-c71de04c7db9
+    - ip: 10.233.66.51
+      nodeName: node2
+      targetRef:
+        kind: Pod
+        name: golang-app-p968l
+        namespace: default
+        uid: af16acda-5d77-48cb-8345-3f2749392c13
+    - ip: 10.233.67.225
+      nodeName: node3
+      targetRef:
+        kind: Pod
+        name: golang-app-d4wfd
+        namespace: default
+        uid: 4c4e0076-c36d-4e93-a6b0-121992390b0f
+    - ip: 10.233.68.209
+      nodeName: node4
+      targetRef:
+        kind: Pod
+        name: golang-app-j4khw
+        namespace: default
+        uid: 0d84e973-be9d-4620-b8d0-a5b05bfd69bb
+    ports:
+    - port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2025-03-25T08:16:17Z"
+    name: golang-service-go
+    namespace: default
+    resourceVersion: "16643573"
+    uid: dcd01ee2-ecc5-4255-91dd-a39f7687cd60
+  subsets:
+  - addresses:
+    - ip: 10.233.65.153
+      nodeName: node1
+      targetRef:
+        kind: Pod
+        name: golang-daemonset-lmstn
+        namespace: default
+        uid: 0fbd26e7-961f-4d38-be4b-314987f7d3a8
+    - ip: 10.233.66.44
+      nodeName: node2
+      targetRef:
+        kind: Pod
+        name: golang-daemonset-4zxsr
+        namespace: default
+        uid: 144e2f5d-b098-40d0-b896-c184f17522f8
+    - ip: 10.233.67.197
+      nodeName: node3
+      targetRef:
+        kind: Pod
+        name: golang-daemonset-czl2j
+        namespace: default
+        uid: a345637a-97cf-4aa9-a106-242a993fc3c3
+    - ip: 10.233.68.74
+      nodeName: node4
+      targetRef:
+        kind: Pod
+        name: golang-daemonset-j9vkb
+        namespace: default
+        uid: 8983e0a2-0ddd-48c0-bc31-2530042eccac
+    ports:
+    - port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2025-02-17T09:44:04Z"
+    labels:
+      endpointslice.kubernetes.io/skip-mirror: "true"
+    name: kubernetes
+    namespace: default
+    resourceVersion: "194"
+    uid: 299bf430-d08f-4cef-af4a-a0c937fd31cb
+  subsets:
+  - addresses:
+    - ip: 37.27.12.106
+    ports:
+    - name: https
+      port: 6443
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2025-03-11T06:15:27Z"
+    labels:
+      app: my-go-app
+    name: my-go-app
+    namespace: default
+    resourceVersion: "8403872"
+    uid: 4b15a35b-e1b3-4db4-af6a-eade622f4437
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-09T14:52:27Z"
+    creationTimestamp: "2025-02-21T15:25:58Z"
+    labels:
+      app: nginx
+    name: nginx
+    namespace: default
+    resourceVersion: "19743010"
+    uid: 49e5448b-1aa5-40cc-8795-83b015da21ec
+  subsets:
+  - addresses:
+    - ip: 10.233.65.224
+      nodeName: node1
+      targetRef:
+        kind: Pod
+        name: nginx-66fcbbd5f6-5g9bt
+        namespace: default
+        uid: 680f90bd-7630-4ca6-ba62-eb8e5fd7162c
+    ports:
+    - port: 80
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2025-03-07T15:06:25Z"
+    labels:
+      application: v1
+      author: practice-i-abdullayev
+    name: nginx-external
+    namespace: default
+    resourceVersion: "8403906"
+    uid: 62991e54-9094-4ad3-a2e1-1ae2b8300cc4
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2025-03-09T06:35:51Z"
+    labels:
+      application: v1
+      author: practice-f-sadatov
+    name: nginx-named-port
+    namespace: default
+    resourceVersion: "8403913"
+    uid: 725eba45-3251-4b7e-973a-a55207378176
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2025-03-07T15:01:13Z"
+    labels:
+      application: v1
+      author: practice-i-abdullayev
+    name: nginxservice
+    namespace: default
+    resourceVersion: "8403907"
+    uid: 1993e0cd-1fb7-4436-b155-deefef608bc9
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2025-03-06T12:58:19Z"
+    name: postgres-db
+    namespace: default
+    resourceVersion: "6131456"
+    uid: 8e4c5fd7-36e0-4055-9c04-2c5ec2901bfc
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2025-02-24T18:11:42Z"
+    labels:
+      app: prologic-todo
+    name: prologic-todo
+    namespace: default
+    resourceVersion: "2667916"
+    uid: dcca48e8-cb54-4144-ab43-d9e470092a5f
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2025-02-24T18:14:46Z"
+    labels:
+      app: prologic-todo
+    name: prologic-todo-nodeport
+    namespace: default
+    resourceVersion: "2667915"
+    uid: 780a662b-917f-4966-b086-b9d1454ff5bf
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2025-02-25T10:05:07Z"
+    labels:
+      app: prologic-todo
+    name: prologic-todo1
+    namespace: default
+    resourceVersion: "2667917"
+    uid: fdfee2c4-5675-408a-b877-1b79716f8969
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2025-02-24T14:24:57Z"
+    labels:
+      app: todo
+    name: todo
+    namespace: default
+    resourceVersion: "4223761"
+    uid: ce4cb072-e60f-44da-912a-b2c8056acd7d
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2025-02-24T15:58:34Z"
+    labels:
+      app: todo-app
+    name: todo-app
+    namespace: default
+    resourceVersion: "2256097"
+    uid: e5061590-ed33-4c9b-b240-826d4ec60032
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2025-02-25T10:22:08Z"
+    labels:
+      app: todo
+    name: todo-deploy
+    namespace: default
+    resourceVersion: "4223754"
+    uid: a0bd585e-1370-40b2-962f-dbd262d72ef5
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2025-02-24T14:29:11Z"
+    name: todo-deployment
+    namespace: default
+    resourceVersion: "4223751"
+    uid: 77b00f99-d78c-4511-a27e-43365ad91937
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2025-03-02T05:10:16Z"
+    labels:
+      app: todo
+    name: todo-nodeport
+    namespace: default
+    resourceVersion: "4223752"
+    uid: 8c641f31-d3eb-4b4c-b728-6286209c2733
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2025-03-02T05:09:29Z"
+    labels:
+      app: todo
+    name: todo-svc
+    namespace: default
+    resourceVersion: "4223756"
+    uid: eb8414cd-7bf3-4308-837d-19b4d38e319f
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2025-02-24T14:25:45Z"
+    labels:
+      app: todo
+    name: todo-xondamir
+    namespace: default
+    resourceVersion: "4223762"
+    uid: 911f965e-2080-42e3-b84e-08cfa272fa92
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2025-02-25T10:26:27Z"
+    labels:
+      app: todo
+    name: todolist-nodeport
+    namespace: default
+    resourceVersion: "4223753"
+    uid: 7001dcf3-c939-4df7-8f07-cc23731e4d86
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-11T20:23:24Z"
+    creationTimestamp: "2025-04-11T16:30:03Z"
+    labels:
+      app: final-exam
+    name: final-exam
+    namespace: dilmurod-final
+    resourceVersion: "20613722"
+    uid: 78848766-720b-454e-b8b1-9656b89dd70f
+  subsets:
+  - addresses:
+    - ip: 10.233.67.204
+      nodeName: node3
+      targetRef:
+        kind: Pod
+        name: final-exam-665c894c94-h9cd4
+        namespace: dilmurod-final
+        uid: d14db98a-764c-4e55-a4ca-01768cd05f78
+    ports:
+    - port: 5000
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-11T16:52:34Z"
+    creationTimestamp: "2025-04-11T16:52:34Z"
+    name: frontend-something
+    namespace: dilmurod-final
+    resourceVersion: "20498773"
+    uid: df6dc3cb-7c88-4b8d-b5e6-b368a83df17f
+  subsets:
+  - addresses:
+    - ip: 10.233.66.171
+      nodeName: node2
+      targetRef:
+        kind: Pod
+        name: frontend-something-d47fb476d-47smt
+        namespace: dilmurod-final
+        uid: 93e3034c-6ede-4671-a63d-bda435c6a9fe
+    ports:
+    - port: 80
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-11T17:08:12Z"
+    creationTimestamp: "2025-04-11T17:08:12Z"
+    name: final-env-exam
+    namespace: farrukh-final
+    resourceVersion: "20505236"
+    uid: a332503b-6819-4bc5-b267-5239b4f39eab
+  subsets:
+  - addresses:
+    - ip: 10.233.67.142
+      nodeName: node3
+      targetRef:
+        kind: Pod
+        name: final-env-exam-54bb99b54d-lk7zb
+        namespace: farrukh-final
+        uid: d77b86eb-a816-4c31-87b2-4af9c41350a9
+    ports:
+    - port: 5000
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-11T17:15:00Z"
+    creationTimestamp: "2025-04-11T17:15:00Z"
+    name: final-env-exam-clusterip
+    namespace: farrukh-final
+    resourceVersion: "20508512"
+    uid: 711cc545-b90c-4fa4-9745-d1f9dfdba1f9
+  subsets:
+  - addresses:
+    - ip: 10.233.67.142
+      nodeName: node3
+      targetRef:
+        kind: Pod
+        name: final-env-exam-54bb99b54d-lk7zb
+        namespace: farrukh-final
+        uid: d77b86eb-a816-4c31-87b2-4af9c41350a9
+    ports:
+    - port: 5000
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-11T17:51:19Z"
+    creationTimestamp: "2025-04-11T17:51:19Z"
+    name: frontend-something
+    namespace: farrukh-final
+    resourceVersion: "20527740"
+    uid: b411c690-bb24-4cbf-93bf-1a03430e2bd9
+  subsets:
+  - addresses:
+    - ip: 10.233.66.146
+      nodeName: node2
+      targetRef:
+        kind: Pod
+        name: frontend-something-6fff4dc777-9v486
+        namespace: farrukh-final
+        uid: 22cfd811-32d5-4488-9654-096aaf13fec9
+    ports:
+    - port: 80
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-11T18:47:41Z"
+    creationTimestamp: "2025-04-11T17:52:30Z"
+    labels:
+      app: final-exam
+    name: final-exam-service
+    namespace: fayoz-final
+    resourceVersion: "20556075"
+    uid: 4dfd183f-7e81-43e1-9ddc-06d2f458bf8b
+  subsets:
+  - addresses:
+    - ip: 10.233.67.110
+      nodeName: node3
+      targetRef:
+        kind: Pod
+        name: final-exam-844c7c75f6-xc8s7
+        namespace: fayoz-final
+        uid: b2f5fb03-ea23-4047-a438-1421e3e95c81
+    ports:
+    - port: 5000
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-12T12:58:22Z"
+    creationTimestamp: "2025-04-12T12:56:04Z"
+    name: frontend-something-service
+    namespace: fayoz-final
+    resourceVersion: "21141016"
+    uid: 05fc2a53-e8cf-46b9-a236-cafac3fc8849
+  subsets:
+  - addresses:
+    - ip: 10.233.67.223
+      nodeName: node3
+      targetRef:
+        kind: Pod
+        name: frontend-something-565b4544bb-5h948
+        namespace: fayoz-final
+        uid: 2e2a59c2-51a8-4887-8ac5-7df7906db44e
+    ports:
+    - port: 80
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-12T16:16:26Z"
+    creationTimestamp: "2025-04-12T16:16:26Z"
+    name: final-exam-service
+    namespace: ibrohim-final
+    resourceVersion: "21332443"
+    uid: 306a6a4a-fc2e-4df4-a5aa-1de11e69c0b6
+  subsets:
+  - addresses:
+    - ip: 10.233.66.232
+      nodeName: node2
+      targetRef:
+        kind: Pod
+        name: final-exam-7467cb7888-4fwp4
+        namespace: ibrohim-final
+        uid: 8a21682e-c899-4f4f-920e-8a7b6843feed
+    ports:
+    - port: 5000
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-13T07:17:26Z"
+    creationTimestamp: "2025-04-13T07:17:26Z"
+    name: frontend-svc
+    namespace: ibrohim-final
+    resourceVersion: "22304416"
+    uid: b38f092e-9889-480d-8b67-297896ccf82f
+  subsets:
+  - notReadyAddresses:
+    - ip: 10.233.66.56
+      nodeName: node2
+      targetRef:
+        kind: Pod
+        name: frontend-something-977d88d9b-nt6z9
+        namespace: ibrohim-final
+        uid: b4e991e9-d2e6-4b61-a9d4-b0e700dbfa3f
+    ports:
+    - port: 80
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-10T10:25:32Z"
+    creationTimestamp: "2025-04-10T10:25:15Z"
+    labels:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/instance: ingress-nginx
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: ingress-nginx
+      app.kubernetes.io/part-of: ingress-nginx
+      app.kubernetes.io/version: 1.12.1
+      helm.sh/chart: ingress-nginx-4.12.1
+    name: ingress-nginx-controller
+    namespace: ingress-nginx
+    resourceVersion: "20031517"
+    uid: ea2eb793-8466-4629-803c-cc0d26377631
+  subsets:
+  - addresses:
+    - ip: 65.108.62.223
+      nodeName: node2
+      targetRef:
+        kind: Pod
+        name: ingress-nginx-controller-t94df
+        namespace: ingress-nginx
+        uid: 4037f001-be8b-4379-a435-599849d39ab4
+    - ip: 65.21.148.14
+      nodeName: node3
+      targetRef:
+        kind: Pod
+        name: ingress-nginx-controller-bzxwf
+        namespace: ingress-nginx
+        uid: d61d926f-1fb9-4314-96a3-d9070ca76afd
+    - ip: 65.21.184.121
+      nodeName: node1
+      targetRef:
+        kind: Pod
+        name: ingress-nginx-controller-79swr
+        namespace: ingress-nginx
+        uid: 0ed82fe3-db51-433a-8b71-6aac1a93929f
+    ports:
+    - appProtocol: https
+      name: https
+      port: 443
+      protocol: TCP
+    - appProtocol: http
+      name: http
+      port: 80
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-10T10:25:32Z"
+    creationTimestamp: "2025-04-10T10:25:15Z"
+    labels:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/instance: ingress-nginx
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: ingress-nginx
+      app.kubernetes.io/part-of: ingress-nginx
+      app.kubernetes.io/version: 1.12.1
+      helm.sh/chart: ingress-nginx-4.12.1
+    name: ingress-nginx-controller-admission
+    namespace: ingress-nginx
+    resourceVersion: "20031516"
+    uid: ecbd31f7-2048-4824-8d7c-331a0c4f23d5
+  subsets:
+  - addresses:
+    - ip: 65.108.62.223
+      nodeName: node2
+      targetRef:
+        kind: Pod
+        name: ingress-nginx-controller-t94df
+        namespace: ingress-nginx
+        uid: 4037f001-be8b-4379-a435-599849d39ab4
+    - ip: 65.21.148.14
+      nodeName: node3
+      targetRef:
+        kind: Pod
+        name: ingress-nginx-controller-bzxwf
+        namespace: ingress-nginx
+        uid: d61d926f-1fb9-4314-96a3-d9070ca76afd
+    - ip: 65.21.184.121
+      nodeName: node1
+      targetRef:
+        kind: Pod
+        name: ingress-nginx-controller-79swr
+        namespace: ingress-nginx
+        uid: 0ed82fe3-db51-433a-8b71-6aac1a93929f
+    ports:
+    - appProtocol: https
+      name: https-webhook
+      port: 8443
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-12T05:37:50Z"
+    creationTimestamp: "2025-04-12T05:37:50Z"
+    labels:
+      app: practice-6
+    name: practice-6
+    namespace: j-jumanazarov
+    resourceVersion: "20896895"
+    uid: bad8a3ba-fc04-44a0-8893-a78912ece64d
+  subsets:
+  - addresses:
+    - ip: 10.233.67.205
+      nodeName: node3
+      targetRef:
+        kind: Pod
+        name: practice-6-64848f965c-mg5f8
+        namespace: j-jumanazarov
+        uid: cdb3d0eb-a15a-42ee-b60f-5243ad5a9942
+    ports:
+    - port: 5000
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-12T13:08:34Z"
+    creationTimestamp: "2025-04-12T13:08:34Z"
+    labels:
+      app: final-exam
+    name: final-exam
+    namespace: jamshid-final
+    resourceVersion: "21148710"
+    uid: 39cce641-d0d0-45fc-aab6-7e2095f88a61
+  subsets:
+  - addresses:
+    - ip: 10.233.66.114
+      nodeName: node2
+      targetRef:
+        kind: Pod
+        name: final-exam-5d87cc9fb8-62fg5
+        namespace: jamshid-final
+        uid: 921a754d-4a7f-4302-9221-53393884e420
+    ports:
+    - port: 5000
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-12T13:22:59Z"
+    creationTimestamp: "2025-04-12T13:22:59Z"
+    labels:
+      app: final-exam
+    name: final-exam-clusterip
+    namespace: jamshid-final
+    resourceVersion: "21159293"
+    uid: 63d99cdf-ed48-4a61-816e-100845ba4c3f
+  subsets:
+  - addresses:
+    - ip: 10.233.66.114
+      nodeName: node2
+      targetRef:
+        kind: Pod
+        name: final-exam-5d87cc9fb8-62fg5
+        namespace: jamshid-final
+        uid: 921a754d-4a7f-4302-9221-53393884e420
+    ports:
+    - port: 5000
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-12T14:09:16Z"
+    creationTimestamp: "2025-04-12T14:09:16Z"
+    labels:
+      app: frontend-something
+    name: frontend-something
+    namespace: jamshid-final
+    resourceVersion: "21201256"
+    uid: 26a4c62b-53d0-45a7-b063-ffcb62954e27
+  subsets:
+  - addresses:
+    - ip: 10.233.66.97
+      nodeName: node2
+      targetRef:
+        kind: Pod
+        name: frontend-something-67944cd6f-s6nkh
+        namespace: jamshid-final
+        uid: fb86821d-674e-49d2-9ad6-3423662d5937
+    ports:
+    - port: 80
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-12T07:31:59Z"
+    creationTimestamp: "2025-04-12T07:31:59Z"
+    name: final-exam-service
+    namespace: khurshid-final
+    resourceVersion: "20954461"
+    uid: b32f0b1a-078e-4ac4-965d-c57f13e46c29
+  subsets:
+  - addresses:
+    - ip: 10.233.67.228
+      nodeName: node3
+      targetRef:
+        kind: Pod
+        name: final-exam-6ff6ff684d-dcvt8
+        namespace: khurshid-final
+        uid: 360a3ce8-abf1-4f89-984a-904b76879a0d
+    ports:
+    - port: 5000
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-12T07:48:31Z"
+    creationTimestamp: "2025-04-12T07:48:31Z"
+    name: final-exam-service-cip
+    namespace: khurshid-final
+    resourceVersion: "20963166"
+    uid: 7cfe69e0-7474-4a3c-9cde-ccb3678addf8
+  subsets:
+  - addresses:
+    - ip: 10.233.67.228
+      nodeName: node3
+      targetRef:
+        kind: Pod
+        name: final-exam-6ff6ff684d-dcvt8
+        namespace: khurshid-final
+        uid: 360a3ce8-abf1-4f89-984a-904b76879a0d
+    ports:
+    - port: 5000
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-12T08:36:58Z"
+    creationTimestamp: "2025-04-12T08:36:58Z"
+    name: frontend-something
+    namespace: khurshid-final
+    resourceVersion: "20989017"
+    uid: f07f68e7-8bb0-4e5b-ae6c-d785f21c7dda
+  subsets:
+  - addresses:
+    - ip: 10.233.66.23
+      nodeName: node2
+      targetRef:
+        kind: Pod
+        name: frontend-something-7c9b9bf7d7-g2mvb
+        namespace: khurshid-final
+        uid: e1bde920-66ba-4d6b-9bde-7e9364fdae49
+    ports:
+    - port: 80
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-03-09T10:11:11Z"
+    creationTimestamp: "2025-02-17T09:46:51Z"
+    labels:
+      addonmanager.kubernetes.io/mode: Reconcile
+      k8s-app: kube-dns
+      kubernetes.io/name: coredns
+    name: coredns
+    namespace: kube-system
+    resourceVersion: "6130400"
+    uid: 89c810d4-4560-488f-9c83-fd39da0bd0f7
+  subsets:
+  - addresses:
+    - ip: 10.233.64.58
+      nodeName: master-node1
+      targetRef:
+        kind: Pod
+        name: coredns-f8f58bfb9-bcdxq
+        namespace: kube-system
+        uid: 3118f582-94c4-4740-921e-31be6ec421bc
+    - ip: 10.233.65.1
+      nodeName: node1
+      targetRef:
+        kind: Pod
+        name: coredns-f8f58bfb9-l6gvs
+        namespace: kube-system
+        uid: bc593a9d-5794-4ea8-8ae6-a1d0fda3150e
+    ports:
+    - name: dns-tcp
+      port: 53
+      protocol: TCP
+    - name: dns
+      port: 53
+      protocol: UDP
+    - name: metrics
+      port: 9153
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-03-09T10:07:47Z"
+    creationTimestamp: "2025-03-05T14:17:28Z"
+    labels:
+      k8s-app: metrics-server
+    name: metrics-server
+    namespace: kube-system
+    resourceVersion: "6129453"
+    uid: c702dd8f-1d52-4b19-aa39-6c8cf08cb53b
+  subsets:
+  - addresses:
+    - ip: 10.233.64.69
+      nodeName: master-node1
+      targetRef:
+        kind: Pod
+        name: metrics-server-5bbfbfb9d6-5chx7
+        namespace: kube-system
+        uid: 306fc578-a5a6-4417-968f-e1bddf01e961
+    ports:
+    - name: https
+      port: 10250
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-04T14:39:35Z"
+    creationTimestamp: "2025-04-04T14:39:08Z"
+    labels:
+      app: longhorn-admission-webhook
+      app.kubernetes.io/instance: longhorn
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: longhorn
+      app.kubernetes.io/version: v1.8.1
+      helm.sh/chart: longhorn-1.8.1
+    name: longhorn-admission-webhook
+    namespace: longhorn-system
+    resourceVersion: "17866050"
+    uid: 8f4463f9-c99e-4e40-b55c-bb7dce393a36
+  subsets:
+  - addresses:
+    - ip: 10.233.65.4
+      nodeName: node1
+      targetRef:
+        kind: Pod
+        name: longhorn-manager-4q2lw
+        namespace: longhorn-system
+        uid: a339e5a5-b439-4aac-b0e6-39aae691df73
+    - ip: 10.233.66.215
+      nodeName: node2
+      targetRef:
+        kind: Pod
+        name: longhorn-manager-9lfv2
+        namespace: longhorn-system
+        uid: 222a7ffe-d6e2-4522-993c-d13730d4780a
+    - ip: 10.233.67.241
+      nodeName: node3
+      targetRef:
+        kind: Pod
+        name: longhorn-manager-bmjvs
+        namespace: longhorn-system
+        uid: c9849a05-9314-41bd-a82c-a8fdbc57fc2a
+    ports:
+    - name: admission-webhook
+      port: 9502
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-04T14:39:35Z"
+    creationTimestamp: "2025-04-04T14:39:08Z"
+    labels:
+      app: longhorn-manager
+      app.kubernetes.io/instance: longhorn
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: longhorn
+      app.kubernetes.io/version: v1.8.1
+      helm.sh/chart: longhorn-1.8.1
+    name: longhorn-backend
+    namespace: longhorn-system
+    resourceVersion: "17866018"
+    uid: 1a7cc655-9644-4851-bf81-4de8d1cf8928
+  subsets:
+  - addresses:
+    - ip: 10.233.65.4
+      nodeName: node1
+      targetRef:
+        kind: Pod
+        name: longhorn-manager-4q2lw
+        namespace: longhorn-system
+        uid: a339e5a5-b439-4aac-b0e6-39aae691df73
+    - ip: 10.233.66.215
+      nodeName: node2
+      targetRef:
+        kind: Pod
+        name: longhorn-manager-9lfv2
+        namespace: longhorn-system
+        uid: 222a7ffe-d6e2-4522-993c-d13730d4780a
+    - ip: 10.233.67.241
+      nodeName: node3
+      targetRef:
+        kind: Pod
+        name: longhorn-manager-bmjvs
+        namespace: longhorn-system
+        uid: c9849a05-9314-41bd-a82c-a8fdbc57fc2a
+    ports:
+    - name: manager
+      port: 9500
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-04T14:39:35Z"
+    creationTimestamp: "2025-04-04T14:39:08Z"
+    labels:
+      app: longhorn-conversion-webhook
+      app.kubernetes.io/instance: longhorn
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: longhorn
+      app.kubernetes.io/version: v1.8.1
+      helm.sh/chart: longhorn-1.8.1
+    name: longhorn-conversion-webhook
+    namespace: longhorn-system
+    resourceVersion: "17866019"
+    uid: 714bc387-23e4-49fa-aa22-97e4fb03011e
+  subsets:
+  - addresses:
+    - ip: 10.233.65.4
+      nodeName: node1
+      targetRef:
+        kind: Pod
+        name: longhorn-manager-4q2lw
+        namespace: longhorn-system
+        uid: a339e5a5-b439-4aac-b0e6-39aae691df73
+    - ip: 10.233.66.215
+      nodeName: node2
+      targetRef:
+        kind: Pod
+        name: longhorn-manager-9lfv2
+        namespace: longhorn-system
+        uid: 222a7ffe-d6e2-4522-993c-d13730d4780a
+    - ip: 10.233.67.241
+      nodeName: node3
+      targetRef:
+        kind: Pod
+        name: longhorn-manager-bmjvs
+        namespace: longhorn-system
+        uid: c9849a05-9314-41bd-a82c-a8fdbc57fc2a
+    ports:
+    - name: conversion-webhook
+      port: 9501
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-04T14:39:15Z"
+    creationTimestamp: "2025-04-04T14:39:08Z"
+    labels:
+      app: longhorn-ui
+      app.kubernetes.io/instance: longhorn
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: longhorn
+      app.kubernetes.io/version: v1.8.1
+      helm.sh/chart: longhorn-1.8.1
+    name: longhorn-frontend
+    namespace: longhorn-system
+    resourceVersion: "17865524"
+    uid: eaaa4024-023c-4630-8d05-288c964d20c0
+  subsets:
+  - addresses:
+    - ip: 10.233.66.205
+      nodeName: node2
+      targetRef:
+        kind: Pod
+        name: longhorn-ui-7ff79dfb4-gk9fb
+        namespace: longhorn-system
+        uid: ea3dbc72-0243-4922-8d10-00d2b9d9770f
+    - ip: 10.233.67.90
+      nodeName: node3
+      targetRef:
+        kind: Pod
+        name: longhorn-ui-7ff79dfb4-jszw9
+        namespace: longhorn-system
+        uid: 42261228-633a-4f33-8a10-064a1d54561c
+    ports:
+    - name: http
+      port: 8000
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-04T14:39:35Z"
+    creationTimestamp: "2025-04-04T14:39:08Z"
+    labels:
+      app: longhorn-recovery-backend
+      app.kubernetes.io/instance: longhorn
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: longhorn
+      app.kubernetes.io/version: v1.8.1
+      helm.sh/chart: longhorn-1.8.1
+    name: longhorn-recovery-backend
+    namespace: longhorn-system
+    resourceVersion: "17866054"
+    uid: 2ddaa712-7c4f-43c9-867b-9c4c24a74610
+  subsets:
+  - addresses:
+    - ip: 10.233.65.4
+      nodeName: node1
+      targetRef:
+        kind: Pod
+        name: longhorn-manager-4q2lw
+        namespace: longhorn-system
+        uid: a339e5a5-b439-4aac-b0e6-39aae691df73
+    - ip: 10.233.66.215
+      nodeName: node2
+      targetRef:
+        kind: Pod
+        name: longhorn-manager-9lfv2
+        namespace: longhorn-system
+        uid: 222a7ffe-d6e2-4522-993c-d13730d4780a
+    - ip: 10.233.67.241
+      nodeName: node3
+      targetRef:
+        kind: Pod
+        name: longhorn-manager-bmjvs
+        namespace: longhorn-system
+        uid: c9849a05-9314-41bd-a82c-a8fdbc57fc2a
+    ports:
+    - name: recovery-backend
+      port: 9503
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-12T08:45:00Z"
+    creationTimestamp: "2025-04-12T08:45:00Z"
+    labels:
+      app: final-exam
+    name: final-exam
+    namespace: osmon-final
+    resourceVersion: "20992975"
+    uid: 251bf814-f404-440d-9ba0-7ebce6c3907a
+  subsets:
+  - addresses:
+    - ip: 10.233.66.202
+      nodeName: node2
+      targetRef:
+        kind: Pod
+        name: final-exam-b774b986c-l8hgt
+        namespace: osmon-final
+        uid: 23a5c685-fc8b-4bf7-8391-203d9d5075c3
+    ports:
+    - port: 5000
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-12T09:35:03Z"
+    creationTimestamp: "2025-04-12T09:35:03Z"
+    labels:
+      app: frontend-something
+    name: frontend-something
+    namespace: osmon-final
+    resourceVersion: "21019314"
+    uid: ee77ace9-2609-43b2-93f4-e55e9ada18ef
+  subsets:
+  - addresses:
+    - ip: 10.233.66.90
+      nodeName: node2
+      targetRef:
+        kind: Pod
+        name: frontend-something-8587d8dcb6-6sfwz
+        namespace: osmon-final
+        uid: 0ee9cca2-d0d2-45cb-9be2-91df7f31d724
+    ports:
+    - port: 80
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2025-02-24T11:48:19Z"
+    name: laravel-service
+    namespace: special
+    resourceVersion: "8405024"
+    uid: 1c80961f-ca6c-4fcf-b244-033f40791d74
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-03-09T10:05:16Z"
+    creationTimestamp: "2025-02-26T10:39:43Z"
+    labels:
+      app: reg-ing
+    name: reg-ing
+    namespace: special
+    resourceVersion: "6126154"
+    uid: 9e68bc18-39cb-492d-9fa9-750c28c4947b
+  subsets:
+  - addresses:
+    - ip: 10.233.64.71
+      nodeName: master-node1
+      targetRef:
+        kind: Pod
+        name: reg-ing-d8676fcd8-fqm6s
+        namespace: special
+        uid: fb0629ed-7499-43bf-8489-5fc1848f1ced
+    ports:
+    - port: 80
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-12T10:32:34Z"
+    creationTimestamp: "2025-04-12T10:32:34Z"
+    labels:
+      app: final-env
+    name: final-env
+    namespace: xondamir-final
+    resourceVersion: "21048669"
+    uid: ff41a275-aed8-4723-a468-e95ac5128dce
+  subsets:
+  - addresses:
+    - ip: 10.233.67.139
+      nodeName: node3
+      targetRef:
+        kind: Pod
+        name: final-env-78f8c9cb4b-pwpkg
+        namespace: xondamir-final
+        uid: 73f0e65d-5278-41c5-985b-e05f2555e60e
+    ports:
+    - port: 5000
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-12T10:35:04Z"
+    creationTimestamp: "2025-04-12T10:35:04Z"
+    labels:
+      app: final-env
+    name: final-env2
+    namespace: xondamir-final
+    resourceVersion: "21050067"
+    uid: 6adbb285-c7e6-44e3-b044-33b1f29bf027
+  subsets:
+  - addresses:
+    - ip: 10.233.67.139
+      nodeName: node3
+      targetRef:
+        kind: Pod
+        name: final-env-78f8c9cb4b-pwpkg
+        namespace: xondamir-final
+        uid: 73f0e65d-5278-41c5-985b-e05f2555e60e
+    ports:
+    - port: 5000
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-12T13:55:07Z"
+    creationTimestamp: "2025-04-12T13:55:07Z"
+    labels:
+      app: frontend-something
+    name: frontend-something
+    namespace: xondamir-final
+    resourceVersion: "21187342"
+    uid: 216d0b2c-236a-4e53-ab2c-c5c2202e6459
+  subsets:
+  - addresses:
+    - ip: 10.233.66.18
+      nodeName: node2
+      targetRef:
+        kind: Pod
+        name: frontend-something-59f55b4558-hnjcm
+        namespace: xondamir-final
+        uid: c2e9ed64-3473-4714-92fe-f7d919f3a3a2
+    ports:
+    - port: 80
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-11T15:29:12Z"
+    creationTimestamp: "2025-04-11T15:29:12Z"
+    labels:
+      app: final-exam
+    name: final-exam
+    namespace: zoyirjon-final
+    resourceVersion: "20469766"
+    uid: 275d544e-2daf-44ae-9274-053a67af4fc7
+  subsets:
+  - addresses:
+    - ip: 10.233.65.175
+      nodeName: node1
+      targetRef:
+        kind: Pod
+        name: final-exam-df44f796c-x7r5n
+        namespace: zoyirjon-final
+        uid: 322e01a8-abfa-41ca-b6ed-6aaf3fd375b3
+    ports:
+    - port: 5000
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-04-11T16:15:27Z"
+    creationTimestamp: "2025-04-11T16:15:27Z"
+    name: frontend-something
+    namespace: zoyirjon-final
+    resourceVersion: "20484202"
+    uid: eda1ee00-6711-4004-9305-6f1341ec43aa
+  subsets:
+  - addresses:
+    - ip: 10.233.66.86
+      nodeName: node2
+      targetRef:
+        kind: Pod
+        name: frontend-something-d47fb476d-hxnsp
+        namespace: zoyirjon-final
+        uid: 37a9e2aa-ac86-4f37-b9bf-c3d478110e6c
+    ports:
+    - port: 80
+      protocol: TCP
+kind: List
+metadata:
+  resourceVersion: ""

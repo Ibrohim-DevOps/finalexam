@@ -1,0 +1,5 @@
+master-node1	node-role.kubernetes.io/control-plane=
+node1	=
+node2	=
+node3	=
+node4	devops=course
